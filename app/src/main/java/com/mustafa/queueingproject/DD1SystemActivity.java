@@ -76,7 +76,8 @@ public class DD1SystemActivity extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                if(!λField1.getText ().toString ().isEmpty () && !μField1.getText ().toString ().isEmpty () && Double.parseDouble ( λField1.getText ().toString () ) >= Double.parseDouble ( s.toString () ))
+                if(!s.equals("."))
+                    if(!λField1.getText ().toString ().isEmpty () && !μField1.getText ().toString ().isEmpty () && Double.parseDouble ( λField1.getText ().toString () ) >= Double.parseDouble ( s.toString () ))
                 {
                     isM = true;
                     MField1.setVisibility ( View.VISIBLE );
@@ -156,7 +157,7 @@ public class DD1SystemActivity extends AppCompatActivity
                                 "n(t)= " + M + "\n\n" +
 
                                 "Wq(n)= " + (M-1)*(1/μ) );
-            }else
+            } else
             {
                 for(int i = 0 ; i > -1 ; i ++)
                 {
@@ -216,7 +217,6 @@ public class DD1SystemActivity extends AppCompatActivity
             result ();
 
         }
-
     }
 
     private void result()
